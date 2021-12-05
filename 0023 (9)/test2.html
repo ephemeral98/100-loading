@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .door {
+      width: 50%;
+      height: 100%;
+      background-color: rgb(203, 220, 226);
+      position: fixed;
+      top: 0;
+      transition: all .8s ease-out;
+    }
+
+    .left_door {
+      left: 0;
+    }
+
+    .right_door {
+      left: 50%;
+    }
+
+    .close_left_door {
+      left: -50%;
+    }
+
+    .close_right_door {
+      left: 100%;
+    }
+
+    .close_door_btn{
+      position: fixed;
+      left: 0;
+      top: 0;
+      background-color: red;
+      z-index: 999;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="door left_door"></div>
+  <div class="door right_door"></div>
+  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus magnam, obcaecati, nam recusandae dolore delectus ipsam explicabo ea molestiae sapiente hic iure laudantium perferendis, esse dolorem adipisci accusantium omnis. Debitis, repellat iste vero mollitia cumque beatae ut fugit, accusantium culpa similique non possimus, dicta fugiat iusto ratione? Et inventore vel quas blanditiis, minus est quidem nemo minima iure ex tenetur. Quibusdam iure animi voluptates obcaecati numquam pariatur autem nesciunt ut, ipsa, deserunt facere libero rerum est officia optio asperiores aliquid, quae possimus amet quidem recusandae debitis consequatur. Ipsam sequi dolores aperiam eum modi commodi. Officia enim maiores officiis sunt explicabo.
+  <button class="close_door_btn">click</button>
+
+  <script>
+    const leftDoor = document.querySelector('.left_door');
+    const rightDoor = document.querySelector('.right_door');
+    const closeBtn = document.querySelector('.close_door_btn');
+    closeBtn.addEventListener('click', () => {
+      console.log('hello, close');
+
+      leftDoor.classList.remove('left_door');
+      leftDoor.classList.add('close_left_door');
+
+      rightDoor.classList.remove('right_door');
+      rightDoor.classList.add('close_right_door');
+
+    })
+
+  </script>
+</body>
+
+</html>

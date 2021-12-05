@@ -1,0 +1,82 @@
+.clock_loading {
+  width: 64px;
+  height: 64px;
+
+    /* width: 128px;
+    height: 128px; */
+  position: fixed;
+  box-sizing: border-box;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  font-size: 0;
+
+  border: solid 4px transparent;
+  box-shadow: 0 0 20px #73c9e5;
+
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.clock_loading:before,
+.clock_loading:after {
+  position: absolute;
+  display: block;
+  content: "";
+  background: currentColor;
+  animation: timer-loader 1250ms infinite linear;
+  animation-delay: -625ms;
+
+  top: 26px;
+  left: 26px;
+  width: 4px;
+  border-radius: 4px;
+  transform-origin: 2px 2px 0;
+
+  /* top: 56px;
+  left: 56px;
+  width: 8px;
+  border-radius: 8px;
+  transform-origin: 4px 4px 0; */
+  
+}
+
+.clock_loading:after {
+  color: #FB7299;
+  box-shadow: 0 0 10px #FB7299;
+  height: 16px;
+
+  /* height: 32px; */
+  animation-duration: 15s;
+  animation-delay: -7.5s;
+}
+
+.clock_loading:before {
+  color: #333;
+  box-shadow: 0 0 10px #333;
+  height: 24px;
+  /* height: 48px; */
+}
+
+@keyframes timer-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-90deg);
+  }
+
+  50% {
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+body {
+  /* background-color: skyblue; */
+}
